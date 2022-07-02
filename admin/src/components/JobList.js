@@ -14,7 +14,7 @@ export default function JobList() {
 
   return (
     <div className="relative pt-12 mx-auto">
-      <table className="bg-transparent w-4/5 mx-auto">
+      <table className="bg-transparent w-auto mx-auto">
         <thead className="bg-white">
           <tr>
             <th className="px-4 w-24 py-4 text-xs text-zinc-700 rounded-tl-xl">Id</th>
@@ -41,19 +41,19 @@ export default function JobList() {
                   {job.description.split(" ").slice(0, 20).join(" ") + " . . ."}
                 </td>
                 <td className="px-4 py-4 text-xs text-zinc-700">{job.vacancy}</td>
-                <td className="px-4 py-4 text-xs text-zinc-700">
+                <td className="px-4 py-12 text-xs text-zinc-700 flex justify-center">
                   <Link
                     to={`/jobs/${job.id}`}
-                    className="mr-2 bg-emerald-600 rounded-full px-2 py-1 text-white"
+                    className="mr-2 bg-emerald-600 rounded-lg px-2 py-1 text-white bg-opacity-80 shadow-lg shadow-emerald-300 hover:bg-white hover:text-emerald-500 duration-500"
                   >
                     See Details
                   </Link>
-                  <button className="mr-2 bg-sky-600 rounded-full px-2 py-1 text-white">
+                  <button className="mr-2 bg-sky-600 rounded-lg px-2 py-1 text-white bg-opacity-80 shadow-lg shadow-sky-300 hover:text-sky-500 hover:bg-white hover:scale-110 duration-500 hover:shadow-md">
                     Edit
                   </button>
                   <button
                     onClick={() => dispatch(removeJob(job.id))}
-                    className="bg-rose-600 rounded-full px-2 py-1 text-white"
+                    className="bg-rose-600 rounded-lg px-2 py-1 text-white bg-opacity-80 shadow-lg shadow-rose-300 hover:text-rose-500 hover:bg-white hover:scale-110 duration-500 hover:shadow-md"
                   >
                     Delete
                   </button>
