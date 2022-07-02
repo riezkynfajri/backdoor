@@ -29,46 +29,11 @@ function App() {
             </TokenCheck>
           }
         >
-          <Route
-            path=""
-            element={
-              <TokenCheck>
-                <CompanyList />
-              </TokenCheck>
-            }
-          />
-          <Route
-            path="companies/:id"
-            element={
-              <TokenCheck>
-                <CompanyDetail />
-              </TokenCheck>
-            }
-          />
-          <Route
-            path="jobs"
-            element={
-              <TokenCheck>
-                <JobList />
-              </TokenCheck>
-            }
-          />
-          <Route
-            path="jobs/:id"
-            element={
-              <TokenCheck>
-                <JobDetail />
-              </TokenCheck>
-            }
-          />
-          <Route
-            path="admin/add"
-            element={
-              <TokenCheck>
-                <AdminForm />
-              </TokenCheck>
-            }
-          />
+          <Route path="" element={<CompanyList />} />
+          <Route path="companies/:id" element={<CompanyDetail />} />
+          <Route path="jobs" element={<JobList />} />
+          <Route path="jobs/:id" element={<JobDetail />} />
+          <Route path="admin/add" element={<AdminForm />} />
         </Route>
       </Routes>
     </div>
