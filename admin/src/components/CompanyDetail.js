@@ -24,7 +24,7 @@ export default function CompanyDetail() {
           alt="company banner"
         />
         <img
-          className="h-40 w-40  relative border-4 border-sky-300 border-opacity-90 bottom-[16%] ml-[28px]"
+          className="h-40 w-40  relative border-4 border-sky-300 shadow-md shadow-slate-600 border-opacity-90 bottom-[16%] ml-[28px]"
           src={company.companyLogo}
         />
         <div className="flex flex-col h-[10vh] relative w-full mt-16 px-4 bottom-[25%] text-white">
@@ -32,7 +32,7 @@ export default function CompanyDetail() {
           <h2 className="text-md text-sky-600">
             <FontAwesomeIcon icon={faLocationDot} /> {company.location}
           </h2>
-          <p className="text-md py-2 text-zinc-800"> {company.description}</p>
+          <p className="text-md mx-4 py-2 text-zinc-800"> {company.description}</p>
         </div>
       </div>
     </div>
